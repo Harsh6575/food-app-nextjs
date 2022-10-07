@@ -14,7 +14,13 @@ const Navbar = () => {
         </span>
         Food
       </a>
-      <FaBars id="menu-bar" className="menu-bar" onClick={showNavbar} />
+      {navbar
+        ? <AiOutlineClose
+            id="menu-bar"
+            className="menu-bar"
+            onClick={showNavbar}
+          />
+        : <FaBars id="menu-bar" className="menu-bar" onClick={showNavbar} />}
       <nav className={navbar ? "navbar active" : "navbar"}>
         <a href="#home" onClick={showNavbar}>
           Home
